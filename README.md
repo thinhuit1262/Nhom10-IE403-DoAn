@@ -1,12 +1,10 @@
 # Xây dựng mô hình dự đoán tính cách người dùng mạng xã hội từ bộ dữ liệu MBTI.
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-
 ![RoBERTa](https://img.shields.io/badge/Model-RoBERTa-blueviolet?style=for-the-badge)
 ![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white)
 * **Môn học:** IE403 - Phân tích và thiết kế hệ thống thông tin
