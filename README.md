@@ -26,11 +26,12 @@ Dự án tập trung nghiên cứu việc áp dụng các kỹ thuật Xử lý 
 * **Link Dataset:** [https://www.kaggle.com/datasets/zeyadkhalid/mbti-personality-types-500-dataset, https://www.kaggle.com/datasets/datasnaek/mbti-type]
 
 ## 4. Phương pháp và Mô hình
-Nhóm đã triển khai quy trình thực nghiệm toàn diện gồm[cite: 115, 129]:
+Nhóm đã triển khai quy trình thực nghiệm toàn diện gồm:
 1. **Tiền xử lý:** Làm sạch nhiễu, xóa URL/Emoji và đặc biệt là xóa 16 từ khóa định danh tính cách.
 2. **Biểu diễn văn bản:** Sử dụng TF-IDF, Word Embeddings (GloVe, FastText) và Contextual Embeddings (RoBERTa).
-3. **Kiến trúc mô hình:** * **Baseline:** Logistic Regression và SVM.
-   * **Deep Learning:** TextCNN và LSTM[cite: 73].
+3. **Kiến trúc mô hình:**
+   * **Baseline:** Logistic Regression và SVM.
+   * **Deep Learning:** TextCNN và LSTM.
    * **SOTA:** RoBERTa.
 
 ## 5. Kết quả đạt được
