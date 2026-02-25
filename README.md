@@ -34,10 +34,10 @@ Nhóm đã triển khai quy trình thực nghiệm toàn diện gồm[cite: 115,
    * **SOTA:** RoBERTa.
 
 ## 5. Kết quả đạt được
-**Hiệu ứng dữ liệu lớn:** Việc mở rộng lên bộ MBTI-500 giúp hiệu suất tăng từ 10% - 20% trên tất cả các mô hình.
-**Xếp hạng hiệu năng:** Nhóm mô hình Baseline (Logistic/SVM) giữ vững vị trí số 1 về tính ổn định và hiệu quả trên dữ liệu văn bản mạng xã hội.
-**Bứt phá trục NS:** Đạt độ chính xác cao nhất (>91% với LinearSVC)[cite: 235].
-**Cải thiện trục JP:** Tăng trưởng mạnh nhất khi có dữ liệu lớn, đưa hiệu suất từ mức "đoán mò" (55%) lên mức khả dụng (~75%).
+* **Hiệu ứng dữ liệu lớn:** Việc mở rộng lên bộ MBTI-500 giúp hiệu suất tăng từ 10% - 20% trên tất cả các mô hình.
+* **Xếp hạng hiệu năng:** Nhóm mô hình Baseline (Logistic/SVM) tốt nhất về tính ổn định và hiệu quả trên dữ liệu văn bản mạng xã hội.
+* **Bứt phá trục NS:** Đạt độ chính xác cao nhất (>91% với LinearSVC).
+* **Cải thiện trục JP:** Tăng trưởng mạnh nhất khi có dữ liệu lớn, đưa hiệu suất từ mức "đoán mò" (55%) lên mức khả dụng (~75%).
 
 ---
 © 2026 - Nhóm 10 - Faculty of Information Science and Engineering, UIT.
