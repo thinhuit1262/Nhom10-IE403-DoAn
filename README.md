@@ -1,7 +1,7 @@
 # Xây dựng mô hình dự đoán tính cách người dùng mạng xã hội từ bộ dữ liệu MBTI.
-**Môn học:** IE403 - Phân tích và thiết kế hệ thống thông tin
-**Giảng viên hướng dẫn:** ThS. Huỳnh Văn Tín, ThS. Nguyễn Văn Kiệt 
-**Nhóm thực hiện:** Nhóm 10
+* **Môn học:** IE403 - Phân tích và thiết kế hệ thống thông tin
+* **Giảng viên hướng dẫn:** ThS. Huỳnh Văn Tín, ThS. Nguyễn Văn Kiệt 
+* **Nhóm thực hiện:** Nhóm 10
 * Lê Vũ Khánh Thảo - 23521469
 * Hoàng Ngọc Quý - 21522529
 * Trần Hoàng Nguyên - 21522396
