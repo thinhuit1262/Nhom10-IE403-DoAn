@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dự đoán MBTI từ văn bản</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; padding: 40px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #343a40; }
+        textarea { width: 100%; height: 150px; padding: 10px; font-size: 16px; border-radius: 6px; border: 1px solid #ced4da; resize: none; }
+        input[type="submit"] { background-color: #007bff; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; margin-top: 10px; }
+        input[type="submit"]:hover { background-color: #0056b3; }
+        .card { margin-top: 24px; background-color: #f1f3f5; padding: 20px; border-radius: 10px; }
+        .mbti { font-size: 22px; font-weight: bold; color: #007bff; margin-top: 10px; }
+        .ai { font-size: 22px; font-weight: bold; color: #28a745; margin-top: 10px; }
+        .compare { margin-top: 16px; padding: 12px; border-radius: 8px; font-weight: 600; }
+        .match { background: #e6ffed; color: #1f7a3b; }
+        .mismatch { background: #fff5f5; color: #b00020; }
+        .explain-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+        .axis-card { background: #ffffff; border: 1px solid #e9ecef; border-radius: 8px; padding: 12px; }
+        .axis-title { font-weight: 600; margin-bottom: 6px; color: #495057; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Dự đoán tính cách MBTI từ văn bản</h2>
+        <form method="POST">
+            <textarea name="text" placeholder="Nhập đoạn văn thể hiện tính cách của bạn..."></textarea><br>
+            <input type="submit" value="Dự đoán">
+        </form>
+
+        {% if result %}
+        <div class="card">
+            <h3>Kết quả mô hình huấn luyện (.pkl):</h3>
+            <ul>
+                {% for axis, value in result.items() %}
+                    <li><strong>{{ axis }}:</strong> {{ value }}</li>
+                {% endfor %}
+            </ul>
+            {% if mbti_local %}
+                <div class="mbti">MBTI (local model): {{ mbti_local }}</div>
+            {% endif %}
+
+            <div class="explain-grid">
+                <div class="axis-card">
+                    <div class="axis-title">I vs E</div>
+                    <div><strong>I (Hướng nội):</strong> nạp năng lượng khi ở một mình, suy nghĩ sâu, kín đáo.</div>
+                    <div><strong>E (Hướng ngoại):</strong> nạp năng lượng khi giao tiếp, cởi mở, thích hoạt động xã hội.</div>
+                </div>
+                <div class="axis-card">
+                    <div class="axis-title">N vs S</div>
+                    <div><strong>N (Trực giác):</strong> tập trung ý tưởng, khả năng, tương lai, mẫu hình.</div>
+                    <div><strong>S (Giác quan):</strong> tập trung thực tế, chi tiết, hiện tại, trải nghiệm cụ thể.</div>
+                </div>
+                <div class="axis-card">
+                    <div class="axis-title">T vs F</div>
+                    <div><strong>T (Lý trí):</strong> quyết định dựa trên logic, nguyên tắc, tính nhất quán.</div>
+                    <div><strong>F (Cảm xúc):</strong> quyết định dựa trên giá trị, cảm xúc, sự hòa hợp.</div>
+                </div>
+                <div class="axis-card">
+                    <div class="axis-title">J vs P</div>
+                    <div><strong>J (Quyết đoán):</strong> thích kế hoạch, rõ ràng, kết thúc công việc.</div>
+                    <div><strong>P (Linh hoạt):</strong> thích linh hoạt, khám phá, mở lựa chọn.</div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if ai_mbti %}
+        <div class="card">
+            <h3>Kết quả AI Hugging Face:</h3>
+            <div class="ai">MBTI: {{ ai_mbti }}</div>
+        </div>
+        {% endif %}
+
+        {% if mbti_local and ai_mbti %}
+        <div class="card">
+            <h3>So sánh:</h3>
+            {% if mbti_local == ai_mbti %}
+                <div class="compare match">✅ Khớp nhau: {{ mbti_local }}</div>
+            {% else %}
+                <div class="compare mismatch">❌ Không khớp: Local = {{ mbti_local }} • AI = {{ ai_mbti }}</div>
+            {% endif %}
+        </div>
+        {% endif %}
